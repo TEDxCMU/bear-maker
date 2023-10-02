@@ -7,13 +7,13 @@ import { useState } from "react";
 export default function CharMaker() {
     const [img, setImg] = useState("/placeholder.png");
     const updateImage = (e) => {  
-        // setImg('./faces/sparkle-grin.png'); 
-        console.log(e)
+        console.log(e.currentTarget)
+       setImg(e.currentTarget.getAttribute("data"))
     }; 
-           //need to find a way to only do onClick on specific image
+   
     return <>
         <Display imgUrl={img}></Display>
-        <Selector images={constantObject.faces} onClick={updateImage}></Selector>
-        <div>hi</div>
+        <Selector images={constantObject.faces} updateFunction={updateImage}></Selector>
+        <div>hi</div> 
     </>
 }
