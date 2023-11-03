@@ -26,6 +26,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+nav {
+  display: flex;
+}
+
+.navRight{
+  width: 45%;
+  background-color: #9EB9FF;
+  padding: 3rem 0 3rem 5rem; 
+  border: black solid 1px;
+}
+
+.navLeft{
+  width: 55%;
+  background-color: #82A5FF;
+  padding: 3rem; 
+  border: black solid 1px;
+  text-align: right;
+}
+
+/* Selection Bar */
 .selector {
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +57,77 @@ body {
   flex-direction: column;
   align-items: center;
   width: 45%;
-  margin: 0 0 1em 0;
   padding: 1em;
+  background-color: white;
 }
+
+.optionBar{
+  padding: 1rem; 
+  background-color: #C2E2FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 2rem 0; 
+  border-radius: 5px;
+   
+}
+
+.optionBarWrapper{
+  background-color: #EEFCFF;
+  padding-left: 5rem; 
+  padding-right: 2rem;
+  border-radius: 5px;
+  height: 75vw; 
+}
+
+img{
+  border-radius: 10px;
+}
+
+.selectButton{
+  padding:0.5rem 1rem 0.5rem 1rem; 
+  background-color: #C2D3FF;
+  border-radius: 10px;
+  margin-right: 3rem;
+}
+
+/* Page */
+
+.bodyWrap{
+  display: flex; 
+  flex-direction: row;
+}
+
+.pageRight{
+  width: 45%; 
+  border: black solid 1px;
+}
+
+.pageLeft{
+  width: 55%; 
+  border: black solid 1px;
+}
+
+.displayWrapper{
+  padding-left: 2rem;
+  background-color: #EEF4FF;
+  height: 75vw; 
+}
+
+/* Text */
+
+h1
+{
+  font-weight: bold;
+  font-size: 33px;
+  padding: 2rem 0 2rem 0;
+}
+
+h2
+{
+  font-weight: bold; 
+  font-size: 18px;
+  padding-bottom: 0;
+}
+
+
