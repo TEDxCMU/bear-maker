@@ -14,6 +14,8 @@ export default function CharMaker() {
     });
 
     const updateHead = (e) => {  
+        console.log(e.currentTarget)
+        console.log(e.currentTarget.getAttribute("data"))
         setImgs({"head": e.currentTarget.getAttribute("data"), "body": imgs.body, "hand1": imgs.hand1,"hand2": imgs.hand2})
     }; 
     const updateBody = (e) => {  
