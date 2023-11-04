@@ -77,7 +77,7 @@ nav {
 .navLeft{
   width: 55%;
   background-color: #82A5FF;
-  padding-left: 3rem; 
+  padding: 3rem 5rem 3rem 5rem; 
   border: black solid 1px;
   text-align: right;
 }
