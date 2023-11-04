@@ -39,9 +39,9 @@ export default function CharMaker() {
         <Display imgs={imgs}></Display>
         <div className="selectors">
         <Selector category="Head" images={constantObject.head} updateFunction={updateHead}></Selector>
-        <Selector category="Hand 1" images={constantObject.hand1} updateFunction={updateHand1}></Selector>
-        <Selector category="Hand 2" images={constantObject.hand2} updateFunction={updateHand2}></Selector>
-        <Selector category="Body" images={constantObject.body} updateFunction={updateBody}></Selector>
+        <Selector category="Left Hand" images={constantObject.hand1} updateFunction={updateHand1}></Selector>
+        <Selector category="Right Hand" images={constantObject.hand2} updateFunction={updateHand2}></Selector>
+        <Selector category="Clothes" images={constantObject.body} updateFunction={updateBody}></Selector>
         </div>
         <button onClick={downloadImage}>Download</button>
         {/* <FacebookShareButton url={img}>
