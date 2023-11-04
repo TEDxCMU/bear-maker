@@ -2,6 +2,8 @@
 import Selector from "./components/selector"
 import Display from "./components/display"
 import constantObject from "./components/constants"
+import Button from "./components/button"
+import Navbar from "./components/navbar"
 import { useState } from "react";
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
@@ -36,21 +38,32 @@ export default function CharMaker() {
       };
    
     return <>
-        <Display imgs={imgs}></Display>
-        <div className="selectors">
-        <Selector category="Head" images={constantObject.head} updateFunction={updateHead}></Selector>
-        <Selector category="Left Hand" images={constantObject.hand1} updateFunction={updateHand1}></Selector>
-        <Selector category="Right Hand" images={constantObject.hand2} updateFunction={updateHand2}></Selector>
-        <Selector category="Clothes" images={constantObject.body} updateFunction={updateBody}></Selector>
+    <div className="body">
+        <div className="pageLeft">
+            <div className="selectors">
+                <h1> Selections </h1>
+                <Selector category="Head" images={constantObject.head} updateFunction={updateHead}></Selector>
+                <Selector category="Left Hand" images={constantObject.hand1} updateFunction={updateHand1}></Selector>
+                <Selector category="Right Hand" images={constantObject.hand2} updateFunction={updateHand2}></Selector>
+                <Selector category="Clothes" images={constantObject.body} updateFunction={updateBody}></Selector>
+            </div>
         </div>
-        <button onClick={downloadImage}>Download</button>
-        {/* <FacebookShareButton url={img}>
-            Share on Facebook 
-        </FacebookShareButton> 
-            
-        <TwitterShareButton url={img}>
-            Share on Twitter
-        </TwitterShareButton> */}
+        <div className="pageRight">
+            <h1> Display </h1>
+            <Button className="selectButton" select="Reset"/>
+            <Button className="selectButton" select="Download" onClick={downloadImage}/>
+            {/* <FacebookShareButton url={img}>
+                Share on Facebook 
+            </FacebookShareButton> 
+                
+            <TwitterShareButton url={img}>
+                Share on Twitter
+            </TwitterShareButton> */}
+            <div className="display">
+            <Display imgs={imgs}></Display>
+            </div>
+        </div>
+    </div>
     </>
     
 }

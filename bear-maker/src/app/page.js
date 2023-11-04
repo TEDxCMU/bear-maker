@@ -1,13 +1,15 @@
 import { SaasProvider } from '@saas-ui/react'
 import CharMaker from './charMaker.js'
+import Navbar from './components/navbar.js'
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-24">
+    <>
+      <Navbar/>
       <SaasProvider>
        <CharMaker></CharMaker>
       </SaasProvider>
-    </main>
+    </>
   )
 }

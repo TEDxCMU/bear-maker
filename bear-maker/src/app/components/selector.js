@@ -10,7 +10,7 @@ export default function Selector(props) {
     ))
 
     return (<>
-    <h1>{props.category}</h1>
+    <h2>{props.category}</h2>
       <div className="selector">
         {imgs}
       </div>
