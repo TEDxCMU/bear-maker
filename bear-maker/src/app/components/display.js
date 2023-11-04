@@ -2,8 +2,8 @@ import Image from "next/image"
 export default function Display(props) {
     const imgs = props.imgs
     const noImageUrl = "/no-image.png"
-    const width = "1000"
-    const height = "1000"
+    const width = "750"
+    const height = "750"
     return <>
         <Image className="bear_image" src="/base.png" width={width} height={height} alt="character profile image"></Image>
         {imgs.head && imgs.head != noImageUrl ? <Image className="bear_image" src={imgs.head} width={width} height={height} alt="character profile image"></Image>:<></>}

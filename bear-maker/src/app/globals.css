@@ -48,22 +48,12 @@ body {
 
 }
 
-.optionBar{
-  padding: 1rem; 
-  background-color: #C2E2FF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0 2rem 0; 
-  border-radius: 5px;
-}
-
 .bear_image {
   position: absolute;
   top: 55%;
   left: 75%;
   transform: translate(-50%, -50%);
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .selectors {
@@ -91,8 +81,7 @@ nav {
   text-align: right;
 }
 
-/* TEXT */
-
+/* Text */
 h1
 {
   font-weight: bold;
@@ -108,13 +97,11 @@ h2
 }
 
 /* Page */
-
 .pageRight{
   width: 55%; 
   background-color: #EEFCFF;
   border: black solid 1px;
-  padding-left: 5rem; 
-  padding-right: 2rem;
+  padding-left: 2rem; 
   height: 150vh; 
 }
 
@@ -123,18 +110,13 @@ h2
   background-color: #EEF4FF;
   border: black solid 1px;
   padding-left: 5rem; 
-  padding-right: 2rem;
   height: 150vh; 
 }
 
+/* Buttons */
 .selectButton{
   padding:0.5rem 1rem 0.5rem 1rem; 
   background-color: #C2D3FF;
   border-radius: 10px;
-  margin-right: 3rem;
-}
-
-.display{
-  display: flex;
-  background-color: white; 
+  margin-right: 1rem;
 }

@@ -5,7 +5,7 @@ export default function Selector(props) {
 
     const imgs = imageList.map((img) => (
         <div className="optionImage" key={img.id} onClick={props.updateFunction} data={img.url}>
-          <img src={img.thumb != "" ? img.thumb : img.url} alt={img.alt} width="150px" height="150px"/>
+          <img src={img.thumb != "" ? img.thumb : img.url} alt={img.alt} width="100px" height="100px"/>
          </div>  
     ))
 
