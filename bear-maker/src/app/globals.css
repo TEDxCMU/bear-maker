@@ -24,29 +24,39 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  height: 100vh;
 }
 
 .body{
   display: flex; 
+  height: 100%;
 }
 
 .selector {
   padding: 1rem; 
   background-color: #C2E2FF;
   display: flex;
-  align-items: flex-start;
-  margin: 1rem 0 1rem 0; 
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0.5em 0 0.7em 0; 
   border-radius: 5px;
   width: 100%; 
+  overflow-x: scroll;
 }
 
 .optionImage {
-  display: flex;
-  flex-direction: column;
   margin: 0.75rem;
   background-color: white;
   border-radius: 10px;
+  width: 4em;
+  flex-shrink: 0;
+  height: 4em;
+}
 
+.optionImage img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .bear_image {
@@ -57,10 +67,6 @@ body {
   margin-top: 0;
 }
 
-.selectors {
-  float:left;
-}
-
 /* NAVBAR */
 
 nav {
@@ -68,16 +74,16 @@ nav {
 }
 
 .navRight{
-  width: 45%;
+  width: 40%;
   background-color: #9EB9FF;
-  padding: 3rem 0 3rem 5rem; 
+  padding: 2em 0 2em 2em; 
   border: black solid 1px;
 }
 
 .navLeft{
-  width: 55%;
+  width: 60%;
   background-color: #82A5FF;
-  padding: 3rem 5rem 3rem 5rem; 
+  padding: 2em 2em 2em 0; 
   border: black solid 1px;
   text-align: right;
 }
@@ -86,32 +92,32 @@ nav {
 h1
 {
   font-weight: bold;
-  font-size: 30px;
-  padding: 2rem 0 2rem 0;
+  font-size: 1.5rem;
+  padding: 1em 0 0.5em 0;
 }
 
 h2
 {
   font-weight: bold; 
-  font-size: 18px;
+  font-size: 1.2rem;
   padding-bottom: 0;
 }
 
 /* Page */
 .pageRight{
-  width: 55%; 
+  width: 60%; 
   background-color: #EEFCFF;
   border: black solid 1px;
   padding-left: 2rem; 
-  height: 150vh; 
 }
 
 .pageLeft{
-  width: 45%; 
+  width: 40%;
   background-color: #EEF4FF;
   border: black solid 1px;
-  padding-left: 5rem; 
-  height: 150vh; 
+  padding-left: 3rem; 
+  padding-right: 3rem;
+  overflow-y: scroll;
 }
 
 /* Buttons */
