@@ -2,39 +2,49 @@
 import Selector from "./components/selector"
 import Display from "./components/display"
 import constantObject from "./components/constants"
-import Button from "./components/button"
-import Navbar from "./components/navbar"
+import UIButton from "./components/button"
 import { useState } from "react";
+import mergeImages from 'merge-images';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
 export default function CharMaker() {
     const [imgs, setImgs] = useState({
-        "head": null,
-        "body": null,
-        "hand1": null,
-        "hand2": null,
+        "background": "/background/whitebg.png",
+        "head": "/alpha.png",
+        "body": "/alpha.png",
+        "hand1": "/alpha.png",
+        "hand2": "/alpha.png",
     });
 
+    const updateBg = (e) => {  
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/background/whitebg.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "background": e.currentTarget.getAttribute("data")})
+    }; 
     const updateHead = (e) => {  
-        console.log(e.currentTarget)
-        console.log(e.currentTarget.getAttribute("data"))
-        setImgs({"head": e.currentTarget.getAttribute("data"), "body": imgs.body, "hand1": imgs.hand1,"hand2": imgs.hand2})
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "head": newImg})
     }; 
     const updateBody = (e) => {  
-        setImgs({"head": imgs.head, "body": e.currentTarget.getAttribute("data"), "hand1": imgs.hand1, "hand2": imgs.hand2})
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "body": newImg})
     }; 
     const updateHand1 = (e) => {  
-        setImgs({"head": imgs.head, "body": imgs.body, "hand1": e.currentTarget.getAttribute("data"), "hand2": imgs.hand2})
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "hand1": newImg})
     }; 
     const updateHand2 = (e) => {  
-        setImgs({"head": imgs.head, "body": imgs.body, "hand1": imgs.hand1, "hand2": e.currentTarget.getAttribute("data")})
-    }; 
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "hand2": newImg})
+    };
 
     const downloadImage = () => {
-        const link = document.createElement('a');
-        link.href = img;
-        link.download = 'image.jpg';
-        link.click();
+        
+        mergeImages([imgs.background, "./base.png", imgs.head, imgs.body, imgs.hand1, imgs.hand2]).then(b64 => {
+            const link = document.createElement('a');
+            link.href = b64;
+            link.download = 'image.jpg';
+            link.click();
+        });
       };
    
     return <>
@@ -50,8 +60,8 @@ export default function CharMaker() {
         </div>
         <div className="pageRight">
             <h1> Display </h1>
-            <Button className="selectButton" select="Reset"/>
-            <Button className="selectButton" select="Download" onClick={downloadImage}/>
+            <UIButton className="selectButton" select="Reset"/>
+            <UIButton className="selectButton" select="Download" onClick={downloadImage}/>
             {/* <FacebookShareButton url={img}>
                 Share on Facebook 
             </FacebookShareButton> 
