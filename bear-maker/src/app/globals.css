@@ -29,7 +29,7 @@ body {
 
 .body {
   display: flex; 
-  height: calc(100vh - 4.5rem); /* TODO: kinda hardcoded */
+  height: calc(100vh - 4.5rem);
 }
 
 .selector {
@@ -71,17 +71,24 @@ nav {
 
 .navRight{
   width: 40%;
+  height: 4.5rem;
+  padding-left: 2rem;
   background-color: #9EB9FF;
-  padding: 1.5em 0 1.5em 2em; 
   border: black solid 1px;
+  display: flex;
+  align-items: center;
 }
 
 .navLeft{
   width: 60%;
+  height: 4.5rem;
+  padding-right: 2rem;
   background-color: #82A5FF;
-  padding: 1.5em 2em 1.5em 0; 
   border: black solid 1px;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Text */
@@ -113,6 +120,7 @@ h2
   border: black solid 1px;
   padding-left: 3rem; 
   padding-right: 3rem;
+  padding-bottom: 3rem;
   overflow-y: scroll;
 }
 
