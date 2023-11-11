@@ -61,10 +61,10 @@ body {
 
 .bear_image {
   position: absolute;
-  top: 55%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  margin-top: 0;
+  /* top: 55%; */
+  /* left: 75%; */
+  /* transform: translate(-50%, -50%); */
+  /* margin-top: 0; */
 }
 
 /* NAVBAR */
@@ -108,7 +108,7 @@ h2
   width: 60%; 
   background-color: #EEFCFF;
   border: black solid 1px;
-  padding-left: 2rem; 
+  padding: 0rem 0rem 2rem 2rem; 
 }
 
 .pageLeft{
@@ -126,4 +126,14 @@ h2
   background-color: #C2D3FF;
   border-radius: 10px;
   margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Display */
+
+.display {
+  height: 100%;
+  background-color: white;
+  position: relative;
+  border: black solid 1px;
 }
