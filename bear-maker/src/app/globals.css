@@ -27,9 +27,9 @@ body {
   height: 100vh;
 }
 
-.body{
+.body {
   display: flex; 
-  height: 100%;
+  height: calc(100vh - 4.5rem); /* TODO: kinda hardcoded */
 }
 
 .selector {
@@ -61,10 +61,6 @@ body {
 
 .bear_image {
   position: absolute;
-  /* top: 55%; */
-  /* left: 75%; */
-  /* transform: translate(-50%, -50%); */
-  /* margin-top: 0; */
 }
 
 /* NAVBAR */
@@ -76,14 +72,14 @@ nav {
 .navRight{
   width: 40%;
   background-color: #9EB9FF;
-  padding: 2em 0 2em 2em; 
+  padding: 1.5em 0 1.5em 2em; 
   border: black solid 1px;
 }
 
 .navLeft{
   width: 60%;
   background-color: #82A5FF;
-  padding: 2em 2em 2em 0; 
+  padding: 1.5em 2em 1.5em 0; 
   border: black solid 1px;
   text-align: right;
 }
@@ -108,7 +104,7 @@ h2
   width: 60%; 
   background-color: #EEFCFF;
   border: black solid 1px;
-  padding: 0rem 0rem 2rem 2rem; 
+  padding: 0rem 2rem 2rem 2rem; 
 }
 
 .pageLeft{
@@ -132,7 +128,7 @@ h2
 /* Display */
 
 .display {
-  height: 100%;
+  height: 70%; /* TODO: also not desirable */
   background-color: white;
   position: relative;
   border: black solid 1px;
