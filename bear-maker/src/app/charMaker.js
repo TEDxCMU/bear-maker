@@ -9,16 +9,18 @@ import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
 export default function CharMaker() {
     const [imgs, setImgs] = useState({
-        "background": "/background/whitebg.png",
+        "background": "/alpha.png",
         "head": "/alpha.png",
         "body": "/alpha.png",
         "hand1": "/alpha.png",
         "hand2": "/alpha.png",
+        "pants": "/alpha.png",
+        "shoes": "/alpha.png",
     });
 
     const updateBg = (e) => {  
-        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/background/whitebg.png" : e.currentTarget.getAttribute("data")
-        setImgs({...imgs, "background": e.currentTarget.getAttribute("data")})
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "background": newImg})
     }; 
     const updateHead = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
@@ -36,10 +38,18 @@ export default function CharMaker() {
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "hand2": newImg})
     };
+    const updatePants = (e) => {
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "pants": newImg})
+    };
+    const updateShoes = (e) => {
+        let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
+        setImgs({...imgs, "shoes": newImg})
+    };
 
     const downloadImage = () => {
         
-        mergeImages([imgs.background, "./base.png", imgs.head, imgs.body, imgs.hand1, imgs.hand2]).then(b64 => {
+        mergeImages([imgs.background, "./base.png", imgs.pants, imgs.shoes, imgs.body, imgs.hand1, imgs.hand2, imgs.head]).then(b64 => {
             const link = document.createElement('a');
             link.href = b64;
             link.download = 'image.jpg';
@@ -52,10 +62,13 @@ export default function CharMaker() {
         <div className="pageLeft">
             <div className="selectors">
                 <h1> Selections </h1>
+                <Selector category="Background" images={constantObject.background} updateFunction={updateBg}></Selector>
                 <Selector category="Head" images={constantObject.head} updateFunction={updateHead}></Selector>
                 <Selector category="Left Hand" images={constantObject.hand1} updateFunction={updateHand1}></Selector>
                 <Selector category="Right Hand" images={constantObject.hand2} updateFunction={updateHand2}></Selector>
                 <Selector category="Clothes" images={constantObject.body} updateFunction={updateBody}></Selector>
+                <Selector category="Pants" images={constantObject.pants} updateFunction={updatePants}></Selector>
+                <Selector category="Shoes" images={constantObject.shoes} updateFunction={updateShoes}></Selector>
             </div>
         </div>
         <div className="pageRight">
