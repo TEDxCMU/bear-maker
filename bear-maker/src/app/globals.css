@@ -111,7 +111,7 @@ h2
   width: 60%; 
   background-color: #EEFCFF;
   border: black solid 1px;
-  padding: 0rem 2rem 2rem 2rem; 
+  padding: 0rem 2rem 2rem 2rem;
 }
 
 .pageLeft{
@@ -136,8 +136,9 @@ h2
 /* Display */
 
 .display {
-  height: 70%; /* TODO: also not desirable */
-  background-color: white;
+  height: calc(100vh - 15rem);
+  aspect-ratio: 1/1;
   position: relative;
-  border: black solid 1px;
+  margin: auto;
+  border: 1px solid black;
 }
