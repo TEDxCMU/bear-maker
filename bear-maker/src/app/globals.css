@@ -99,6 +99,15 @@ h2
   padding-bottom: 0;
 }
 
+.link {
+  font-weight: bold; 
+  font-size: 1rem;
+  padding:0.5rem 1rem 0.5rem 1rem; 
+  background-color: #C2D3FF;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
 /* Page */
 .pageRight{
   width: 60%; 
@@ -132,4 +141,18 @@ h2
   background-color: white;
   position: relative;
   border: black solid 1px;
+}
+
+.aboutContainer {
+  padding: 1rem 2rem 1rem 2rem;
+  white-space: pre-wrap;
+}
+
+.aboutText {
+  display: flex; 
+  padding-bottom: .5rem;
+}
+
+.aboutHeader {
+  padding: 1.5rem 0rem 0rem 0rem;
 }
