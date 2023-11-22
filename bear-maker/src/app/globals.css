@@ -97,6 +97,7 @@ h2
   font-weight: bold; 
   font-size: 1.2rem;
   padding-bottom: 0;
+  text-decoration: none;
 }
 
 /* Page */
@@ -132,4 +133,115 @@ h2
   background-color: white;
   position: relative;
   border: black solid 1px;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .body{
+    display: block; 
+  }
+
+  .navRight{
+    width: 70%;
+  }
+  
+  .navLeft{
+    width: 30%;
+    background-color: #82A5FF;
+    padding: 1.5em 2em 1.5em 0; 
+    border: black solid 1px;
+    text-align: right;
+  }
+
+  /* Fonts */
+
+/* Text */
+h1
+{
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1em 0 0.5em 0;
+}
+
+h2
+{
+  font-weight: bold; 
+  font-size: 0.8rem;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
+p
+{
+  font-size: 0.8rem; 
+}
+
+  /* Page */
+.pageRight{
+  width: 100%; 
+  background-color: #EEFCFF;
+  border: black solid 1px;
+  padding: 0rem 2rem 2rem 2rem; 
+}
+
+.pageLeft{
+  width: 100%;
+  background-color: #EEF4FF;
+  border: black solid 1px;
+  padding-left: 3rem; 
+  padding-right: 3rem;
+  overflow-y: scroll;
+}
+
+.display {
+  height: 300px; /* TODO: also not desirable */
+  background-color: white;
+  position: relative;
+  border: black solid 1px;
+}
+
+.bear_image{
+  position: relative; 
+}
+
+/* Selector */
+.selectionMobile{
+  border-top: 1px black solid; 
+  padding: 1rem 0 1rem 0; 
+  display: flex; 
+  align-items: center;
+}
+
+.selectionCategory{
+  margin-right: 1rem; 
+}
+
+.underline{
+  padding: 1rem 0 1rem 0; 
+  border-top: 1px black solid; 
+  display: flex; 
+  align-items: center;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.selectionText {
+  margin-right: 1rem; 
+}
+
 }

@@ -1,6 +1,10 @@
-
-
 export default function Selector(props) {
+
+    const handleCategoryClick = () => {
+      // Handle category click if needed
+      props.clicked(props.id); // Pass the category to the clicked prop
+    };
+
     const imageList = props.images
 
     const imgs = imageList.map((img) => (
@@ -10,7 +14,10 @@ export default function Selector(props) {
     ))
 
     return (<>
-    <h2>{props.category}</h2>
+    <div onClick={handleCategoryClick} className="underline">
+      <h2 className="selectionCategory">{props.category}</h2>
+      <p><i class="arrow up"></i></p>
+    </div>
       <div className="selector">
         {imgs}
       </div>
