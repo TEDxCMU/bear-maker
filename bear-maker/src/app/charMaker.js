@@ -5,9 +5,6 @@ import constantObject from "./components/constants"
 import UIButton from "./components/button"
 import { useState, useCallback, useEffect } from "react";
 import mergeImages from 'merge-images';
-import { FacebookShareButton, TwitterShareButton } from 'react-share';
-import Drop from "../../public/drop.png";
-import Image from "next/image"
 
 export default function CharMaker() {
 
@@ -24,30 +21,72 @@ export default function CharMaker() {
         if (e === 0)
         {
             setIsOpen(!isOpen);
+            setIsOpen1(false); 
+            setIsOpen2(false); 
+            setIsOpen3(false); 
+            setIsOpen4(false); 
+            setIsOpen5(false); 
+            setIsOpen6(false); 
         }
         if (e === 1)
         {
             setIsOpen1(!isOpen1);
+            setIsOpen(false); 
+            setIsOpen2(false); 
+            setIsOpen3(false); 
+            setIsOpen4(false); 
+            setIsOpen5(false); 
+            setIsOpen6(false); 
         }
         if (e === 2)
         {
             setIsOpen2(!isOpen2);
+            setIsOpen(false); 
+            setIsOpen1(false); 
+            setIsOpen3(false); 
+            setIsOpen4(false); 
+            setIsOpen5(false); 
+            setIsOpen6(false); 
         }
         if (e === 3)
         {
             setIsOpen3(!isOpen3);
+            setIsOpen(false); 
+            setIsOpen1(false); 
+            setIsOpen2(false); 
+            setIsOpen4(false); 
+            setIsOpen5(false); 
+            setIsOpen6(false); 
         }
         if (e === 4)
         {
             setIsOpen4(!isOpen4);
+            setIsOpen(false); 
+            setIsOpen1(false); 
+            setIsOpen2(false); 
+            setIsOpen3(false); 
+            setIsOpen5(false); 
+            setIsOpen6(false); 
         }
         if (e === 5)
         {
             setIsOpen5(!isOpen5);
+            setIsOpen(false); 
+            setIsOpen1(false); 
+            setIsOpen2(false); 
+            setIsOpen3(false); 
+            setIsOpen4(false); 
+            setIsOpen6(false); 
         }
         if (e === 6)
         {
             setIsOpen6(!isOpen6);
+            setIsOpen(false); 
+            setIsOpen1(false); 
+            setIsOpen2(false); 
+            setIsOpen3(false); 
+            setIsOpen4(false); 
+            setIsOpen5(false); 
         }
     };
 
