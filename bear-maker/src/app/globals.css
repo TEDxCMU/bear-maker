@@ -3,43 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 100, 60, 50;
+  /* --foreground-rgb: 255, 255, 255; */
+  --background-rgb: 242, 234, 220;
+  /* --background2-rgb: 127, 93, 75; */
+  /* --background2-rgb: 193, 167, 159; */
+  --background2-rgb: 222, 208, 188;
+  --border-width: 3px;
+  --border-radius: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 242, 234, 220;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  background-size: 30px 30px;
+  background-image:
+    linear-gradient(to right, white 1px, transparent 1px),
+    linear-gradient(to bottom, white 1px, transparent 1px);
   height: 100vh;
+  padding: 2em;
 }
 
 .body {
   display: flex; 
-  height: calc(100vh - 4.5rem);
+  height: calc(100vh - 4.5rem - 4rem);
 }
 
 .selector {
   padding: 1rem; 
-  background-color: #C2E2FF;
+  background-color: rgb(var(--background-rgb));
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   margin: 0.5em 0 0.7em 0; 
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%; 
   overflow-x: scroll;
 }
@@ -47,7 +51,7 @@ body {
 .optionImage {
   margin: 0.75rem;
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   width: 4em;
   flex-shrink: 0;
   height: 4em;
@@ -56,7 +60,7 @@ body {
 .optionImage img {
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 .bear_image {
@@ -67,14 +71,18 @@ body {
 
 nav {
   display: flex;
+  /* margin: 0rem 2rem 0rem 2rem; */
+  border-radius: var(--border-radius);
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);
+  background-color: rgb(var(--background2-rgb));
 }
 
 .navRight{
   width: 40%;
   height: 4.5rem;
   padding-left: 2rem;
-  background-color: #9EB9FF;
-  border: black solid 1px;
+  /* background-color: #9EB9FF; */
+  /* border: rgb(var(--foreground-rgb)) solid var(--border-width);; */
   display: flex;
   align-items: center;
 }
@@ -83,8 +91,8 @@ nav {
   width: 60%;
   height: 4.5rem;
   padding-right: 2rem;
-  background-color: #82A5FF;
-  border: black solid 1px;
+  /* background-color: #82A5FF;
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);; */
   text-align: right;
   display: flex;
   align-items: center;
@@ -111,33 +119,38 @@ h2
   font-weight: bold; 
   font-size: 1rem;
   padding:0.5rem 1rem 0.5rem 1rem; 
-  background-color: #C2D3FF;
-  border-radius: 10px;
+  background-color: rgb(var(--background-rgb));
+  border-radius: var(--border-radius);
   margin-top: 2rem;
 }
 
 /* Page */
 .pageRight{
   width: 60%; 
-  background-color: #EEFCFF;
-  border: black solid 1px;
+  background-color: rgb(var(--background2-rgb));
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);;
   padding: 0rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+  border-radius: var(--border-radius);
 }
 
 .pageLeft{
   width: 40%;
-  background-color: #EEF4FF;
-  border: black solid 1px;
+  background-color: rgb(var(--background2-rgb));
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);
   padding-left: 3rem; 
   padding-right: 3rem;
   padding-bottom: 3rem;
   overflow-y: scroll;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-radius: var(--border-radius);
 }
 
 /* Buttons */
 .selectButton{
   padding:0.5rem 1rem 0.5rem 1rem; 
-  background-color: #C2D3FF;
+  background-color: rgb(var(--background-rgb));
   border-radius: 10px;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -146,10 +159,10 @@ h2
 /* Display */
 
 .display {
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 15rem - 6rem);
   aspect-ratio: 1/1;
   position: relative;
-  /* border: black solid 1px; */
+  /* border: rgb(var(--foreground-rgb)) solid var(--border-width);; */
   margin: auto;
 }
 
@@ -165,9 +178,9 @@ h2
   
   .navLeft{
     width: 30%;
-    background-color: #82A5FF;
+    /* background-color: #82A5FF; */
     padding: 1.5em 2em 1.5em 0; 
-    border: black solid 1px;
+    /* border: rgb(var(--foreground-rgb)) solid var(--border-width);; */
     text-align: right;
   }
 
@@ -197,15 +210,15 @@ h2
     /* Page */
   .pageRight{
     width: 100%; 
-    background-color: #EEFCFF;
-    border: black solid 1px;
+    background-color: rgb(var(--background2-rgb));
+    border: rgb(var(--foreground-rgb)) solid var(--border-width);;
     padding: 0rem 2rem 2rem 2rem; 
   }
 
   .pageLeft{
     width: 100%;
-    background-color: #EEF4FF;
-    border: black solid 1px;
+    background-color: rgb(var(--background2-rgb));
+    border: rgb(var(--foreground-rgb)) solid var(--border-width);
     padding-left: 3rem; 
     padding-right: 3rem;
     overflow-y: scroll;
@@ -215,7 +228,7 @@ h2
     height: 300px; /* TODO: also not desirable */
     background-color: white;
     position: relative;
-    /* border: black solid 1px; */
+    /* border: rgb(var(--foreground-rgb)) solid var(--border-width);; */
   }
 
   .bear_image{
@@ -264,8 +277,12 @@ h2
 }
 
 .aboutContainer {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem 3rem 2rem;
   white-space: pre-wrap;
+  background-color: rgb(var(--background2-rgb));
+  border-radius: var(--border-radius);
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);
+  margin-top: 2rem;
 }
 
 .aboutText {
