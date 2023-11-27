@@ -100,33 +100,53 @@ export default function CharMaker() {
         "shoes": "/alpha.png",
     });
 
+    const selectClicked = (e) => {
+        // Remove selected class from all other siblings
+        const siblings = e.currentTarget.parentNode.children;
+        for (let sibling of siblings) {
+            if (sibling !== e.currentTarget) {
+                sibling.classList.remove("selected");
+            }
+        }
+        
+         // Add selected class to clicked element
+         e.currentTarget.classList.add("selected");
+    }
+
     const updateBg = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "background": newImg})
+        selectClicked(e)
     }; 
     const updateHead = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "head": newImg})
+        selectClicked(e)
     }; 
     const updateBody = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "body": newImg})
+        selectClicked(e)
     }; 
     const updateHand1 = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "hand1": newImg})
+        selectClicked(e)
     }; 
     const updateHand2 = (e) => {  
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "hand2": newImg})
+        selectClicked(e)
     };
     const updatePants = (e) => {
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "pants": newImg})
+        selectClicked(e)
     };
     const updateShoes = (e) => {
         let newImg = e.currentTarget.getAttribute("data") == "/no-image.png" ? "/alpha.png" : e.currentTarget.getAttribute("data")
         setImgs({...imgs, "shoes": newImg})
+        selectClicked(e)
     };
 
     const downloadImage = () => {

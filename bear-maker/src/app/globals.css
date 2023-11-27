@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 100, 60, 50;
+  /* --foreground-rgb: 100, 60, 50;
   --background-rgb: 242, 234, 220;
-  --background2-rgb: 222, 208, 188;
+  --background2-rgb: 222, 208, 188; */
 
+  /* --foreground-rgb: 52, 137, 235; */
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   --background2-rgb: 255, 255, 255;
@@ -28,8 +29,8 @@ body {
   background: rgb(var(--background-rgb));
   background-size: 30px 30px;
   background-image:
-    linear-gradient(to right, black 1px, transparent 1px),
-    linear-gradient(to bottom, black 1px, transparent 1px);
+    linear-gradient(to right, rgb(var(--foreground-rgb)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--foreground-rgb)) 1px, transparent 1px);
   height: 100vh;
   padding: 2em;
 }
@@ -66,6 +67,10 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: var(--border-radius);
+}
+
+.selected {
+  border: rgb(var(--foreground-rgb)) solid var(--border-width);
 }
 
 .bear_image {
