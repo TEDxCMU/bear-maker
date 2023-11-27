@@ -1,11 +1,13 @@
+import Link from 'next/link'
+
 export default function Navbar(props) {
     return (<>
         <nav>
             <section className="navRight">
-                <h2><strong>TEDxCMU Build-a-Ted</strong></h2>
+                <Link href="/"><strong>TEDxCMU Build-a-Ted</strong></Link>
             </section>
             <section className="navLeft">
-                <h2> About </h2>
+                <Link href="/about"><strong>About</strong></Link>
             </section>
         </nav>
         </>
