@@ -166,6 +166,18 @@ export default function CharMaker() {
       };
 
     const resize = useMediaQuery(700)
+
+    const resetDisplay = () => {
+        setImgs({
+            "background": "/alpha.png",
+            "head": "/alpha.png",
+            "body": "/alpha.png",
+            "hand1": "/alpha.png",
+            "hand2": "/alpha.png",
+            "pants": "/alpha.png",
+            "shoes": "/alpha.png",
+        })
+    }
    
     return <>
 
@@ -185,7 +197,7 @@ export default function CharMaker() {
         </div>
         <div className="pageRight">
             <h1> Display </h1>
-            <UIButton className="selectButton" select="Reset"/>
+            <UIButton className="selectButton" select="Reset" onClick={resetDisplay}/>
             <UIButton className="selectButton" select="Download" onClick={downloadImage}/>
             {/* <FacebookShareButton url={img}>
                 Share on Facebook 

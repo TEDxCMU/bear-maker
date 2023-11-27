@@ -149,7 +149,7 @@ h2
   height: calc(100vh - 15rem);
   aspect-ratio: 1/1;
   position: relative;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   margin: auto;
 }
 
@@ -215,7 +215,7 @@ h2
     height: 300px; /* TODO: also not desirable */
     background-color: white;
     position: relative;
-    border: black solid 1px;
+    /* border: black solid 1px; */
   }
 
   .bear_image{
