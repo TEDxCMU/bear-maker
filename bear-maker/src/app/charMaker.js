@@ -225,7 +225,7 @@ export default function CharMaker() {
                     ):(
                         <div onClick={() => toggleDropdown(0)} className="selectionMobile">
                             <p className="selectionText">Background</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -236,7 +236,7 @@ export default function CharMaker() {
                     ):(
                         <div  onClick={() => toggleDropdown(1)} className="selectionMobile">
                             <p className="selectionText">Head</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -247,7 +247,7 @@ export default function CharMaker() {
                     ):(
                         <div onClick={() => toggleDropdown(2)} className="selectionMobile">
                             <p className="selectionText">Left Hand</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -258,7 +258,7 @@ export default function CharMaker() {
                     ):(
                         <div  onClick={() => toggleDropdown(3)} className="selectionMobile">
                             <p className="selectionText">Right Hand</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -269,7 +269,7 @@ export default function CharMaker() {
                     ):(
                         <div onClick={() => toggleDropdown(4)} className="selectionMobile">
                             <p className="selectionText">Clothes</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -280,7 +280,7 @@ export default function CharMaker() {
                     ):(
                         <div onClick={() => toggleDropdown(5)} className="selectionMobile">
                             <p className="selectionText">Pants</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>
@@ -291,7 +291,7 @@ export default function CharMaker() {
                     ):(
                         <div onClick={() => toggleDropdown(6)} className="selectionMobile">
                             <p className="selectionText">Shoes</p>
-                            <p><i class="arrow down"></i></p>
+                            <p><i className="arrow down"></i></p>
                         </div>
                     )}
                     </div>

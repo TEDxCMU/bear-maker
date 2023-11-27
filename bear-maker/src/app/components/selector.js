@@ -2,7 +2,9 @@ export default function Selector(props) {
 
     const handleCategoryClick = () => {
       // Handle category click if needed
-      props.clicked(props.id); // Pass the category to the clicked prop
+      if (props.id) {
+        props.clicked(props.id); // Pass the category to the clicked prop
+      }
     };
 
     const imageList = props.images
@@ -16,7 +18,7 @@ export default function Selector(props) {
     return (<>
     <div onClick={handleCategoryClick} className="underline">
       <h2 className="selectionCategory">{props.category}</h2>
-      <p><i class="arrow up"></i></p>
+      <p><i className="arrow up"></i></p>
     </div>
       <div className="selector">
         {imgs}
